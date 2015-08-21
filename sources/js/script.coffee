@@ -208,6 +208,7 @@ $(document).ready ->
 	$('.booking').elem('date').datepicker
 		language: 'ru'
 		format: 'dd.mm.yyyy'
+		autoclose: true
 
 	if $.browser.mobile == true
 		$('body').addClass 'mobile'
@@ -282,10 +283,10 @@ $(document).ready ->
 
 	$(document).on 'click tap touchstart touchmove', (e)->
 		if $('body').hasClass('open') && $(e.target).parents('.sidebar').length == 0 && $(e.target).parents('.nav-trigger').length == 0
-			$('body').removeClass('open')
-			e.preventDefault()
-			e.stopPropagation()
-			return false
+				$('body').removeClass('open')
+				e.preventDefault()
+				e.stopPropagation()
+				return false
 
 	delay 300, ->
 		calculateLayout()

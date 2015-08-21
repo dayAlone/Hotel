@@ -3,11 +3,15 @@
     full-width()
     overflow hidden
     max-height 500px
+    t transform
     &--full, &--full .slider__item
         max-height calc(100vh - 110px)
     .index &
         max-height none
-
+    .open &
+        opacity .5
+        pointer-events none
+        transform translateX(270px)
     @media (min-width: scr_md)
         max-height none
         position fixed
@@ -99,6 +103,10 @@
     position relative
     full-width()
     margin-top -80px
+    .open &
+        opacity .5
+        pointer-events none
+        transform translateX(270px)
     @media (min-width: scr_md)
         max-width 50%
         position fixed

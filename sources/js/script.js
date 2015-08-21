@@ -261,7 +261,8 @@
     initDropdown();
     $('.booking').elem('date').datepicker({
       language: 'ru',
-      format: 'dd.mm.yyyy'
+      format: 'dd.mm.yyyy',
+      autoclose: true
     });
     if ($.browser.mobile === true) {
       $('body').addClass('mobile');

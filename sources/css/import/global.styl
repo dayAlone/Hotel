@@ -20,7 +20,6 @@ body
 			overflow hidden
 	&.open
 		overflow hidden
-		position fixed
 		.overlay
 			position fixed
 			top 0
@@ -48,6 +47,14 @@ svg
 	&--on
 		pointer-events initial
 
+.wrap
+	@media (max-width: scr_md)
+		max-height 100%
+		overflow-x hidden
+		overflow-y auto
+		-webkit-overflow-scrolling: touch
+		.open &
+			overflow hidden
 .dropdown
 	position relative
 	z-index 60
