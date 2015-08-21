@@ -1,0 +1,104 @@
+all_height(x)
+    line-height x
+    max-height x
+    height x
+.index
+    t transform
+    height 100%
+    min-height 100%
+    position relative
+    .open &
+        @extend .open .page
+    &__footer
+        z-index 300
+        overflow hidden
+
+        width 100%
+        @media (min-width: scr_sm)
+            opacity 0
+            position absolute
+            bottom 0
+            right 0
+        @media (min-width: scr_md)
+            width calc(100% - 270px)
+    .booking
+        background white
+        padding 20px 25px
+
+        &__date, &__submit, &__number, .dropdown
+            font-weight bold
+            font-size 11px
+            margin 0 6px
+            width calc(100% - 12px)
+            margin-bottom 15px
+            @media (min-width: scr_sm)
+                margin-bottom 0px
+                width calc(33.333333% - 12px)
+            @media (min-width: scr_lg)
+                width calc(20% - 12px)
+        .dropdown__trigger
+            font-size 11px
+        &__number, .dropdown
+            display none
+            @media (min-width: scr_lg)
+                display block
+        &__number
+            width calc(10% - 12px)
+        &__submit
+            margin-bottom 0px
+    .promos
+        width 100%
+        t opacity
+        overflow hidden
+        background-color #d6e9ef
+
+        .promo
+            width 100%
+            float left
+
+            overflow hidden
+            @media (min-width: scr_xs)
+                padding 0 2px
+            @media (min-width: scr_sm)
+                white-space no-wrap
+                padding 0
+            &__image, &__content
+                display inline-block
+                vertical-align middle
+            &__image
+                background-size cover
+                background-position center center
+                position relative
+                width 100%
+                min-height 175px
+                @media (min-width: scr_sm)
+                    width 40%
+                @media (min-width: scr_lg)
+                    width 50%
+            &__content
+                padding 15px 20px
+                color #585d60
+                font-size 12px
+                line-height 1.2
+                white-space normal
+                width 100%
+                @media (min-width: scr_sm)
+                    width 60%
+                @media (min-width: scr_lg)
+                    font-size 13px
+                    width 50%
+            &__title
+                color black
+                font-size 17px
+                line-height 1
+                font-weight bold
+                margin-bottom 13px
+                @media (min-width: scr_lg)
+                    font-size 18px
+
+        &, .promo__image
+            line-height 140px
+            @media (min-width: scr_sm)
+                all_height(155px)
+            @media (min-width: scr_lg)
+                all_height(185px)

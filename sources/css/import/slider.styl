@@ -1,0 +1,161 @@
+.slider
+    z-index 0
+    full-width()
+    overflow hidden
+    max-height 500px
+    &--full, &--full .slider__item
+        max-height calc(100vh - 110px)
+    .index &
+        max-height none
+
+    @media (min-width: scr_md)
+        max-height none
+        position fixed
+        top 0
+        left 0
+        width 100%
+        height 100%
+        max-height none
+    &__item
+        position absolute
+        top 0
+        left 0
+        width 100%
+        background-size cover
+        background-position center center
+        height 100%
+        max-height 500px
+        .index &
+            max-height none
+        @media (min-width: scr_md)
+            max-height none
+    &__item--dark
+        .slider
+            &__content
+                color black
+            &__button
+                border-color black
+                color black
+    &__content
+        position absolute
+        top 50%
+
+        color white
+        max-width 76%
+        line-height 1.2
+        left 20px
+        transform translateY(-50%)
+        @media (min-width: scr_sm)
+            transform translateY(calc(50% - 370px))
+            left 40px
+            max-width 450px
+        @media (min-width: scr_md)
+            left 315px
+        @media (min-width: scr_lg)
+            left 340px
+        p
+            font-size 17px
+            margin-bottom 20px
+            @media (min-width: scr_md)
+                font-size 22px
+                margin-bottom 26px
+    &__button
+        display inline-block
+        border 1px solid white
+        text-transform uppercase
+        height 30px
+        color white
+        line-height 30px
+        padding 0 25px
+        font-size 11px
+        letter-spacing 3px
+        &:hover
+            background-color white
+            color blue
+            border-color white
+    &__title
+        line-height 1
+        font-weight bold
+        margin-bottom 15px
+        font-size 36px
+        @media (min-width: scr_md)
+            margin-bottom 30px
+            font-size 44px
+
+    .fotorama__stage
+        max-height 500px
+        @media (min-width: scr_sm)
+            max-height none
+
+.previews
+    z-index 20
+    bottom 30px
+    left 50%
+    max-width 73%
+    transform translateX(-50%)
+    text-align center
+    opacity 0
+    t all
+    position relative
+    full-width()
+    margin-top -80px
+    @media (min-width: scr_md)
+        max-width 50%
+        position fixed
+        margin-top 0px
+        left calc(50% + 130px)
+    .half &
+        @media (min-width: scr_md)
+            max-width 25%
+            left calc(73% + 130px)
+    .slick-arrow
+        border 0
+        size 46px
+        text-indent -1000px
+        overflow hidden
+        appearance none
+        background-color transparent !important
+        background-repeat no-repeat
+        background-size contain
+        background-position center center
+
+        position absolute
+        top 50%
+        transform translateY(-50%)
+        &.slick-prev
+            background-image url(/layout/images/svg/left.svg)
+            left -43px
+            @media (min-width: scr_md)
+                left -70px
+        &.slick-next
+            background-image url(/layout/images/svg/right.svg)
+            right -43px
+            @media (min-width: scr_md)
+                right -70px
+
+    .preview
+        display inline-block
+        padding 0 5px
+        width 136px
+        cursor pointer
+        &.slick-center
+            .preview__image
+                box-shadow inset 0 0 0 3px blue
+        &:not(.slick-center):hover
+            .preview__image:before
+                opacity 1
+        &__image
+            width 100%
+            min-height 75px
+            background-size cover
+            background-position center center
+            position relative
+            &:before
+                content ""
+                position absolute
+                opacity 0
+                t all
+                size 100%
+                background alpha(black, .5) url(/layout/images/svg/zoom.svg) no-repeat center center
+                top 0
+                left 0

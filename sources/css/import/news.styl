@@ -1,0 +1,37 @@
+.news
+    margin-bottom 30px
+    &-list
+        margin-bottom 60px
+    &__date
+        color #6a9cb4
+        font-size 14px
+        margin-bottom 3px
+        margin-top -3px
+        + h2
+            margin-top 0px
+            margin-bottom 25px
+    &__title
+        font-size 20px
+        color blue
+        border-line @color
+        &--active, &:hover
+            color orange
+            border-line @color
+    &__image
+        size 100% 200px
+        display inline-block
+        background-size cover
+        background-position center center
+        @media (min-width: scr_xs)
+            size 150px 100px
+    &__content
+        display inline-block
+        vertical-align top
+        margin-top 10px
+        @media (min-width: scr_xs)
+            margin-top 0px
+            width calc(100% - 160px)
+            padding-left 15px
+
+    &--active .news__title
+        @extend .news__title:hover

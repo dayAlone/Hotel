@@ -1,0 +1,21 @@
+toolbar.toolbar
+    .row
+        .col-xs-3.visible-xs.visible-sm
+            a.nav-trigger(href="/")
+                include ../../../public_html/layout/images/svg/nav.svg
+        .col-xs-6.col-sm-6.visible-xs.visible-sm.center
+            a.logo(href="/")
+                include ../../../public_html/layout/images/svg/logo_short.svg
+        .col-xs-3.col-md-8.col-lg-6.xs-right.md-left.hidden-xs
+            span.toolbar__contacts
+                a.phone(href="tel:+74959333639") +7 495 933-36-39 
+                a.feedback(href="#Feedback", data-toggle="modal") обратная связь
+            form(action="/search.html").toolbar__search.search.visible-md-inline.visible-lg-inline
+                input.search__input(name="q", type="text", placeholder="Что будем искать?")
+                button.search__submit(href="#")
+                    include ../../../public_html/layout/images/svg/search.svg
+        
+        .col-xs-3.col-md-4.col-lg-6.right.hidden-sm.hidden-xs
+            span.toolbar__title Гарантия лучшей цены!
+            a.toolbar__button(href="#") Забронировать 
+                span.visible-md-inline номер

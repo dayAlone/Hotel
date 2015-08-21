@@ -1,0 +1,64 @@
+.articles
+	@media (min-width: scr_lg)
+		margin-top 30px
+	.article
+		margin-top 50px
+		@media (max-width: scr_xs)
+			.col-xs-7, .col-xs-5
+				width 100%
+		&--first
+			margin-top 20px
+			@media (min-width: scr_sm)
+				margin-top 50px
+		.page__divider
+			margin 25px 0
+			.page__block--violet &
+				background-color gray
+			.page__block--blue &
+				background-color #0096d1
+			.page__block--brown &
+				background-color #f19729
+		&__image
+			width 100%
+			background-size cover
+			background-position center center
+			border 3px solid
+			display inline-block
+			margin-bottom 25px
+			border-color #0096d1
+			min-height 220px
+			@media (max-width: 370px)
+				min-height 170px
+			@media (min-width: scr_sm)
+				min-height 170px
+			@media (min-width: scr_lg)
+				min-height 240px
+			&:hover, &.hover
+				border-color red
+			.page__block--violet &
+				border-color gray
+				&:hover, &.hover
+					border-color red
+			.page__block--brown &
+				border-color #dd9169
+				&:hover, &.hover
+					border-color #f19729
+		&__text
+			font-size 14px
+			@media (min-width: scr_md)
+				max-width 93%
+			@media (min-width: scr_lg)
+				font-size 15px
+		&__title
+			color white
+
+			line-height 1.1
+			display inline-block
+			width 100%
+			font-size 25px
+			@media (min-width: scr_lg)
+				font-size 30px
+			&:hover, &.hover
+				color red
+				.page__block--brown &
+					color #f19729

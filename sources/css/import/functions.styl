@@ -1,0 +1,37 @@
+/*!
+ * Примеси
+ */
+@import "nib"
+
+full-width()
+	float left
+	width 100%
+
+middle()
+	display inline-block
+	vertical-align middle
+
+t(attr=null,time=.3s)
+	transition-property attr
+	transition-duration time
+
+b(name=null, position=null, color=null, size=null)
+	background color url(../images/name) position
+	if size
+		background-size size
+
+border-dashed(color=rgba(0,0,0,1), top=100%, size=12px)
+	background-image: linear-gradient(left, color 70%, transparent 70%)
+	background-repeat: repeat-x;
+	background-size: size 1px;
+	background-position: 0 top;
+	&:hover
+		text-decoration: none
+
+border-line(color=rgba(0,0,0,1), top=100%)
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, color 50%);
+	background-repeat: repeat-x;
+	background-size: 2px 2px;
+	background-position: 0 top;
+	&:hover
+		text-decoration: none

@@ -1,0 +1,53 @@
+.offers
+    opacity 0
+    @media (min-width: scr_sm)
+        position absolute
+        top 50px
+        min-height calc(100% - 50px)
+    .slick-arrow
+        @extend .previews .slick-arrow
+        z-index 100
+        &.slick-prev
+            left 10px
+        &.slick-next
+            right 10px
+    .offer
+        background-size cover
+        min-height 300px
+        background-position center center
+        width 100%
+        display block
+        float left
+        position relative
+        &:hover
+            &:after
+                opacity 1
+        &:after
+            content ""
+            width 100%
+            height 100%
+            background-color alpha(black, .4)
+            position absolute
+            top 0
+            left 0
+            opacity 0
+            t opacity
+        @media (min-width: scr_sm)
+            height calc(100vh - 50px)
+        &__title
+            font-weight bold
+            font-size 26px
+            margin-bottom 10px
+        &__content
+            text-align center
+            padding 0 50px
+            width 100%
+            top 80%
+            position absolute
+            left 0
+            color white
+            line-height 1.2
+            z-index 3
+            p
+                font-size 14px
+                color alpha(white, .9)

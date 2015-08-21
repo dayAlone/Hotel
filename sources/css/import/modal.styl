@@ -1,0 +1,48 @@
+.modal
+	&-backdrop.in
+		opacity 1
+		background-color alpha(black, .8)
+	&-content
+		border-radius 0
+		padding 20px 40px 30px
+		color black
+		background-color white
+		font-size 16px
+		iframe
+			max-width 100%
+			margin-top 15px
+		h3
+			margin 0 auto
+			padding-bottom: 15px
+			margin-bottom: 20px
+			margin-top 10px
+			font-size 40px
+			text-transform: uppercase
+			font-family title
+			font-weight bold
+
+		a
+			color red
+			&.close
+				position absolute
+				background transparent
+				top 10px
+				right 10px
+				size 30px
+				background-size 30px 60px !important
+				image "/layout/images/modal-close.png"
+				transition-property none
+				background-position bottom center
+				@media (min-width: scr_xs)
+					size 59
+					right -80px
+					top 0
+					background-size 59px 118px !important
+					background-position top center
+				&:hover
+					background-position bottom center
+		p
+			margin-bottom 20px
+		img
+			max-width 100%
+			max-height 70vh

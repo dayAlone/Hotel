@@ -1,0 +1,320 @@
+.page, .side-modal, .offers
+	width 100%
+	transition transform .3s, width .3s
+	color #2c353e
+	background-color #d7e9ef
+	position relative
+	z-index 3
+	min-height 100%
+	overflow hidden
+	@media (min-width: scr_md)
+		min-height calc(100% - 50px)
+		width calc(100% - 270px)
+		margin-left 270px
+	.open &
+		opacity .5
+		pointer-events none
+		transform translateX(270px)
+
+
+
+.page
+	clear both
+	&--half
+		@media (min-width: scr_md)
+			width 0
+			overflow hidden
+			z-index 10
+			.half &
+				width 45%
+	&--line
+		min-height 0
+	&__trigger
+		position fixed
+		top 50%
+		z-index 300
+		border 2px solid black
+		border-radius 50%
+		size 44px
+		text-align center
+		line-height 44px
+		t all
+		left 300px
+		display none
+		@media (min-width: scr_md)
+			display block
+		&:hover
+			border-color white
+			svg path
+				fill white
+		.half &
+			left 65%
+			left calc(47% + 270px)
+		svg
+			height 28px
+			display inline-block
+			vertical-align middle
+			position relative
+			top -2px
+			path
+				fill black
+		&--left
+			span.left
+				display inline-block
+				svg
+					left -3px
+		&--right
+			span.right
+				display inline-block
+				svg
+					left 2px
+		span
+			display none
+	&__nav
+		padding 20px 0
+		margin-right -10px
+		margin-left -10px
+		& + .page__title
+			margin-top 20px
+		.nav
+			&__item
+				color text
+				font-size 13px
+				margin 0 10px
+				display inline-block
+				line-height 17px
+				&:hover
+					color blue
+				&--active, &--active:hover
+					color text
+					border-line @color, 15px
+
+	&__title
+		font-weight bold
+		font-size 44px
+		line-height 1
+		margin-top 0px
+		margin-bottom 40px
+
+	&__content
+
+		full-width()
+		min-width 220px
+		padding 40px 25px
+		@media (min-width: scr_sm)
+			padding 40px 55px
+	.button
+		@extend .booking__submit
+		width auto
+		text-align center
+		padding 0 45px
+		font-weight bold
+
+.text
+	&__table
+		border 4px solid #aed9ed
+		margin-top 30px
+		margin-bottom 30px
+		max-width 100%
+		padding 10px 20px
+		.row > *
+			padding-top 10px
+			padding-bottom 10px
+	p, ul, ol
+		margin-bottom 20px
+	ul, ol
+		padding-left 25px
+		li
+			margin-bottom 4px
+	a
+		color blue
+		border-line alpha(@color, .6)
+		&:hover
+			color blue2
+			border-line alpha(@color, .6)
+	img
+		max-width 100%
+		&.right, &.left
+			max-width 40%
+		&.left
+			float right
+			margin 0 40px 40px 0
+		&.right
+			float right
+			margin 0 0 40px 40px
+
+.fotorama
+	counter-reset: dot;
+	.fotorama__nav--dots .fotorama__nav__frame
+		size 30px
+	.fotorama__nav__frame.fotorama__active .fotorama__dot, .fotorama__dot
+		margin-top 3px
+		size 14px
+		border-radius 50%
+		border 2px solid blue
+
+	.fotorama__nav__frame.fotorama__active .fotorama__dot
+		background-color blue
+
+.side-modal
+	position fixed
+	z-index 500
+	margin-left -200px
+	opacity 0
+	max-height calc(100% - 50px)
+	background-color #d7e9ef
+	pointer-events none
+	t all
+	width 100%
+	top 0
+	overflow auto
+	@media (min-width: scr_md)
+		top 50px
+		right -1px
+		width calc(55% - 269px)
+		overflow hidden
+		.offers + &
+			width calc((100% - 267px) / 2)
+
+
+	@media (min-width: 1225px)
+		.offers + &
+			width calc(((100% - 267px) / 3)*2)
+	&__close
+		svg
+			size 40px
+			path
+				fill blue
+		&:hover
+			svg path
+				fill orange
+	.fotorama
+		margin-bottom 20px
+	&--active
+		margin-left 0px
+		opacity 1
+		pointer-events all
+	.side-modal__content
+		@extend .page__content
+		padding-bottom 40px
+	.fotorama
+		margin-top 25px
+.page .feedback
+	background-color #ebf4f7
+	width 100%
+	min-height 200px
+	padding 45px 30px 30px
+	full-width()
+	&__form
+
+		width 100%
+		display inline-block
+		max-width 400px
+
+	&__label
+		text-transform uppercase
+		font-weight normal
+		font-size 12px
+		line-height 35px
+		color alpha(black, .7)
+		text-align left
+		display block
+	&__input, &__textarea, &__button
+		height 35px
+		width 100%
+		resize none
+		border 1px solid alpha(black, .2)
+		margin-bottom 15px
+		padding 0px 20px
+		line-height 38px
+	&__textarea
+		height 100px
+	&__button
+
+		border 0
+		text-transform uppercase
+		font-size 12px
+		font-weight bold
+		background blue
+		color white
+		t all
+		@media (min-width: scr_md)
+			max-width 50%
+		&:hover
+			background blue2
+	&__title
+		margin-top 0px
+		font-size 22px
+		font-weight bold
+		margin-bottom 30px
+
+#map
+	height 300px
+	min-height 45vh
+	width 100%
+	full-width()
+	@media (min-width: scr_sm)
+		height 500px
+
+.header
+	min-height 180px
+	background-size cover
+	background-position center center
+	text-align center
+	position relative
+	t transform
+	.open &
+		@extend .open .page
+	&:after
+		position absolute
+		top 0
+		left 0
+		size 100%
+		content ""
+		background alpha(blue2, .4)
+	&__title
+		font-weight bold
+		position relative
+		z-index 3
+		color white
+		font-size 35px
+		line-height 140px
+		padding 0 20px
+		span
+			display inline-block
+			vertical-align middle
+			line-height 1
+	&__button
+		width 100%
+		background-color blue
+		display inline-block
+		line-height 62px
+		position relative
+		z-index 3
+		height 60px
+		font-weight bold
+		color white
+		font-size 16px
+		text-transform uppercase
+		&:hover
+			color white
+			background-color orange
+
+.pages
+	margin-top 30px
+	&__item
+		display inline-block
+		size 34px
+		border 2px solid blue
+		color blue
+		border-radius 50%
+		line-height 32px
+		font-size 15px
+		margin 0 10px
+		&:hover
+			color orange
+			border-color orange
+		&--active, &--active:hover
+			color white
+			border-color blue
+			background-color blue

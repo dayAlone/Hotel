@@ -1,0 +1,68 @@
+.overlay
+
+footer.footer.center.visible-xs
+    .booking
+        form.booking__form.clearfix
+            .row
+                .col-sm-6.col-xs-12
+                    input.booking__date(type="text", placeholder="Прибытие", maxlength="10")
+                    a.booking__cal(href="#")
+                        include ../../../public_html/layout/images/svg/cal.svg
+            .row
+                .col-sm-6.col-xs-12
+                    input.booking__date(type="text", placeholder="Выезд", maxlength="10")
+                    a.booking__cal(href="#")
+                        include ../../../public_html/layout/images/svg/cal.svg
+            .booking__dropdown.dropdown
+                a.dropdown__trigger(href="#") 
+                    span Выберите тип номера
+                    include ../../../public_html/layout/images/svg/arrow.svg
+                select.dropdown__select
+                    option(value="1") Тестовый выпадающий элемент
+                    option(value="2") Тестовый выпадающий элемент
+                    option(value="3") Тестовый выпадающий элемент
+                    option(value="4") Тестовый выпадающий элемент
+                    option(value="5") Тестовый выпадающий элемент
+                    option(value="6") Тестовый выпадающий элемент
+                .dropdown__frame
+                    a.dropdown__item(href="#", data-value="1") 
+                        span Тестовый выпадающий элемент
+                    a.dropdown__item(href="#", data-value="2") 
+                        span Тестовый выпадающий элемент
+                    a.dropdown__item(href="#", data-value="3") 
+                        span Тестовый выпадающий элемент
+                    a.dropdown__item(href="#", data-value="4") 
+                        span Тестовый выпадающий элемент
+                    a.dropdown__item(href="#", data-value="5") 
+                        span Тестовый выпадающий элемент
+                    a.dropdown__item(href="#", data-value="6") 
+                        span Тестовый выпадающий элемент
+            .row
+                .col-xs-6
+                    input.booking__number(type="text", placeholder="Взрослые")
+                .col-xs-6
+                    input.booking__number(type="text", placeholder="Дети")
+            button.booking__submit(type="submit") Забронировать
+    .footer__social
+        a(href="#", target="_blank",class="social social--lj")
+            include ../../../public_html/layout/images/svg/lj.svg
+        a(href="#", target="_blank",class="social social--fb")
+            include ../../../public_html/layout/images/svg/fb.svg
+        a(href="#", target="_blank",class="social social--tw")
+            include ../../../public_html/layout/images/svg/tw.svg
+        a(href="#", target="_blank",class="social social--vk")
+            include ../../../public_html/layout/images/svg/vk.svg
+        a(href="#", target="_blank",class="social social--ok")
+            include ../../../public_html/layout/images/svg/ok.svg
+        a(href="#", target="_blank",class="social social--yt")
+            include ../../../public_html/layout/images/svg/yt.svg
+    .footer__contacts
+        | © 2015 Spektr Hotels<br>
+        | Россия, Москва, ул. Усачева, 35 стр.1<br>
+        a(href="#") info@spektr-hotel.ru
+        br
+        br
+        a(href="#") Карта сайта
+
+</body>
+</html>

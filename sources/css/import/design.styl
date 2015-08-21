@@ -1,0 +1,80 @@
+/*
+ * Модификаторы оформления
+ */
+scr_xs = 480px
+scr_sm = 760px
+scr_md = 992px
+scr_lg = 1200px
+
+a, input
+	&:focus
+		outline 0
+		text-decoration: none
+
+a
+	t(color background-color border-radius box-shadow border-radius)
+	&:hover
+		text-decoration none
+
+.no-position
+	position initial
+
+.full-width
+	full-width()
+
+.inline-block
+	display inline-block
+
+for vx in uppercase lowecase
+	.{vx}
+		text-transform vx
+
+for vx in left center right
+	.{vx}
+		text-align vx !important
+
+value = 0px 5px 10px 15px 20px 25px 30px
+value_sm = 5px 10px 15px 20px 25px 30px 35px
+sizes = scr_xs scr_sm scr_md scr_lg
+
+for vx in margin padding
+	.no-{vx}
+		{vx} 0 !important
+	for vq, key in xs sm md lg
+		@media (min-width: sizes[key])
+			.no-{vx}-{vq}
+				{vx} 0 !important
+	for vy in top left bottom right
+		.no-{vx}-{vy}
+			{vx}-{vy} 0 !important
+		for vq, key in xs sm md lg
+			@media (min-width: sizes[key])
+				.no-{vx}-{vy}-{vq}
+					{vx}-{vy} 0 !important
+		for vz, key in xxs xs s m l xl xxl
+			/.{vz}-{vx}-{vy}
+				{vx}-{vy}: value[key] !important
+				@media (min-width: scr_sm)
+					{vx}-{vy}: value_sm[key] !important
+
+for vx in center right left
+	for vz, key in xs sm md lg
+		.{vz}-{vx}
+			@media (min-width: sizes[key])
+				text-align: vx !important
+
+for vx in line-height
+	for vz, key in xxs xs s m l xl xxl
+		/.{vz}-{vx}
+			{vx}: value_sm[key] !important
+
+
+.no-gutter > [class*='col-']
+	padding-right 0
+	padding-left 0
+
+for vz, key in xs sm md lg
+	@media (min-width: sizes[key])
+		.no-gutter-{vz} > [class*='col-']
+			padding-right 0
+			padding-left 0

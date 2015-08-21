@@ -1,0 +1,54 @@
+.prices
+    &:hover .price__image
+        opacity .4
+    .price
+        width 100%
+
+        line-height 200px
+        border-bottom 1px solid alpha(white, .7)
+        t background
+        @media (min-width: scr_sm)
+            height 200px
+        &:hover
+            .price__image
+                opacity 1
+            background-color white
+        &__name
+            font-weight bold
+            font-size 26px
+            margin-bottom 7px
+        &__price
+            font-weight bold
+            font-size 17px
+            color alpha(text, .8)
+        &__button
+            @extend .slider__button
+            border-color blue2
+            color blue2
+            margin-top 30px
+            &:hover
+                border-color blue
+                background-color blue
+                color white
+        &__image
+            min-height 200px
+            float left
+            background-size cover
+            background-position center center
+            width 100%
+            @media (min-width: scr_sm)
+                width 60%
+            @media (min-width: scr_lg)
+                width 70%
+        &__description
+
+            padding 20px 20px 20px 40px
+            display inline-block
+            vertical-align middle
+            line-height 1
+            margin-top -3px
+            width 100%
+            @media (min-width: scr_sm)
+                width 40%
+            @media (min-width: scr_lg)
+                width 30%

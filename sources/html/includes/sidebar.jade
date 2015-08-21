@@ -1,0 +1,51 @@
+.sidebar
+	.sidebar__bg
+		.sidebar__bg-image.
+			<svg width="100%" height="125%" xmlns="http://www.w3.org/2000/svg"><defs><filter id="blur"><feGaussianBlur x="-2%" y="-2%" width="54%" height="104%" in="SourceGraphic" stdDeviation="13"></feGaussianBlur></filter></defs><g filter="url(#blur)"><rect x="0" y="0" width="100%" height="100%" fill="rgba(255,255,255,0)"></rect><image id="js-sidebar-backimage-svgimage" width="100%" height="80%" xlink:href="#{href}"></image></g></svg>
+	.sidebar__content
+		a.close(href="#")
+		.sidebar__languages
+			a.lang.lang--active(href="#") Русский
+			a.lang(href="#") English
+			a.lang(href="#") Turkye
+		.center
+			a.logo(href="/")
+				include ../../../public_html/layout/images/svg/logo.svg
+		nav.sidebar__nav.nav
+			- var nav = [{url:"./rooms.html", big:true, text:"Номера"}, {url:"./promo.html", big:true, text:"Спецпредложения"}, {url:"./buy.html", big:true, text:"Бронирование"}, {url:"./about.html", big:false, text:"Об отеле"}, {url:"./news.html", big:false, text:"Новости"}, {url:"./prices.html", big:false, text:"Цены"}, {url:"./gallery.html", big:false, text:"Фотогалерея"}, {url:"./docs.html", big:false, text:"Документы"}, {url:"./contacts.html", big:false, text:"Контакты"}]
+			each el, key in nav
+				- var c = el.big ? "nav__item--big" : ""
+				- if (activeItem == key) c += " nav__item--active"
+				if key == 3
+					.nav__divider
+				
+				a(href="#{el.url}", class="nav__item #{c}")= el.text
+				br
+			
+		.sidebar__weather.weather
+			.weather__title Погода в Бодруме
+			.weather__day Понедельник, 11.05.2015, 16:54
+			.weather__temperature
+				include ../../../public_html/layout/images/svg/fog.svg
+				| +28 °С
+		footer.sidebar__footer
+			.sidebar__social
+				a(href="#", target="_blank",class="social social--lj")
+					include ../../../public_html/layout/images/svg/lj.svg
+				a(href="#", target="_blank",class="social social--fb")
+					include ../../../public_html/layout/images/svg/fb.svg
+				a(href="#", target="_blank",class="social social--tw")
+					include ../../../public_html/layout/images/svg/tw.svg
+				a(href="#", target="_blank",class="social social--vk")
+					include ../../../public_html/layout/images/svg/vk.svg
+				a(href="#", target="_blank",class="social social--ok")
+					include ../../../public_html/layout/images/svg/ok.svg
+				a(href="#", target="_blank",class="social social--yt")
+					include ../../../public_html/layout/images/svg/yt.svg
+			.sidebar__contacts
+				| © 2015 Spektr Hotels<br>
+				| Россия, Москва, ул. Усачева, 35 стр.1<br>
+				a(href="#") info@spektr-hotel.ru
+				br
+				br
+				a(href="#") Карта сайта

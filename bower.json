@@ -1,0 +1,63 @@
+{
+  "name": "Mars Graduates",
+  "version": "0.0.1",
+  "authors": [
+    "dayAlone <andrey.slider@gmail.com>"
+  ],
+  "description": "MarsGraduates site",
+  "license": "MIT",
+  "homepage": "www.ru",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "bootstrap": "latest",
+    "fotorama": "latest",
+    "slick": "git@github.com:kenwheeler/slick.git",
+    "hoverIntent": "git@github.com:briancherne/jquery-hoverIntent.git",
+    "hypher": "git@github.com:bramstein/hypher.git",
+    "hypher_lib": "git@github.com:bramstein/hyphenation-patterns.git",
+    "jquery.browser": "latest",
+    "velocity": "latest",
+    "jquery.cookie": "latest",
+    "parsleyjs": "latest",
+    "jQuery-Mask-Plugin": "latest",
+    "chosen": "https://github.com/harvesthq/chosen/releases/download/v1.1.0/chosen_v1.1.0.zip",
+    "prettyPhoto": "git@github.com:scaron/prettyphoto.git",
+    "nested": "git@github.com:suprb/Nested.git",
+    "jquery.bem": "*",
+    "isotope": "~2.0.1",
+    "spin.js": "~2.0.1",
+    "history.js": "~1.8.0",
+    "html2canvas": "~0.4.1",
+    "imagesloaded": "~3.1.8",
+    "tooltip": "git@github.com:medelbou/Tooltip-for-Google-Maps.git",
+    "slimmenu": "git@github.com:adnantopal/slimmenu.git",
+    "perfect-scrollbar": "~0.5.6",
+    "bgcheck": "git@github.com:kennethcachia/background-check.git",
+    "iCheck": "~1.0.2",
+    "ion.rangeSlider": "~2.0.2",
+    "lazyloadxt": "~1.0.5",
+    "photoswipe": "~4.0.2",
+    "easyzoom": "~2.2.1",
+    "onepage-scroll": "~1.3.1",
+    "jetSlider": "~1.0.0",
+    "vide": "~0.3.0",
+    "lodash": "~3.10.0",
+    "jquery.transit": "~0.9.12"
+  },
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "sources/bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "social-likes": "~3.0.9"
+  }
+}

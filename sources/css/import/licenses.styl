@@ -1,0 +1,19 @@
+.licenses
+    width 100%
+
+    .license
+        line-height 1.2
+        font-size 20px
+        color blue
+        margin-bottom 15px
+        span
+            border-line @color
+        &--active, &:hover
+            color orange
+            span
+                border-line @color
+        &:after
+            display inline-block
+            min-height 20px
+            content ""
+            width 100%

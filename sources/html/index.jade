@@ -1,0 +1,69 @@
+include includes/header
+<body class="no-padding-top">
+- var activeItem = -1
+include includes/toolbar
+include includes/sidebar
+.index
+    .slider(data-width="100%", data-height="100%", data-min-height="700", data-nav="false", data-autoplay="4000", data-loop="true", data-transition="dissolve", data-transitionduration="1000", data-arrows="false")
+        .slider__item(style="background-image: url(/layout/images/bg-index.jpg)")
+            .slider__content
+                .slider__title Добро пожаловать в отель Спектр
+                p Позвольте себе исключительный отдых в бутик-отеле Спектр в Бодруме
+                a.slider__button(href="#") ПОДРОБНЕЕ
+        .slider__item.slider__item--dark(style="background-image: url(/layout/images/bg-test.jpg)")
+            .slider__content
+                .slider__title Добро пожаловать в отель Спектр
+                p Позвольте себе исключительный отдых в бутик-отеле Спектр в Бодруме
+                a.slider__button(href="#") ПОДРОБНЕЕ
+    .index__footer
+        .booking
+            form.booking__form.clearfix
+                input.booking__date(type="text", placeholder="Прибытие", maxlength="10")
+                a.booking__cal(href="#")
+                    include ../../public_html/layout/images/svg/cal.svg
+                input.booking__date(type="text", placeholder="Выезд", maxlength="10")
+                a.booking__cal(href="#")
+                    include ../../public_html/layout/images/svg/cal.svg
+                .booking__dropdown.dropdown
+                    a.dropdown__trigger(href="#") 
+                        span Выберите тип номера
+                        include ../../public_html/layout/images/svg/arrow.svg
+                    select.dropdown__select
+                        option(value="1") Тестовый выпадающий элемент
+                        option(value="2") Тестовый выпадающий элемент
+                        option(value="3") Тестовый выпадающий элемент
+                        option(value="4") Тестовый выпадающий элемент
+                        option(value="5") Тестовый выпадающий элемент
+                        option(value="6") Тестовый выпадающий элемент
+                    .dropdown__frame
+                        a.dropdown__item(href="#", data-value="1") 
+                            span Тестовый выпадающий элемент
+                        a.dropdown__item(href="#", data-value="2") 
+                            span Тестовый выпадающий элемент
+                        a.dropdown__item(href="#", data-value="3") 
+                            span Тестовый выпадающий элемент
+                        a.dropdown__item(href="#", data-value="4") 
+                            span Тестовый выпадающий элемент
+                        a.dropdown__item(href="#", data-value="5") 
+                            span Тестовый выпадающий элемент
+                        a.dropdown__item(href="#", data-value="6") 
+                            span Тестовый выпадающий элемент
+                input.booking__number(type="text", placeholder="Взрослые")
+                input.booking__number(type="text", placeholder="Дети")
+                button.booking__submit(type="submit") Забронировать
+        .promos
+            a.promo(href="#")
+                .promo__image(style="background-image: url(/layout/images/index-img-1.jpg)")
+                .promo__content
+                    .promo__title Комфортабельные номера
+                    .promo__text Выберите номер на свой вкус и насладитесь великолепием морского воздуха 
+            a.promo(href="#")
+                .promo__image(style="background-image: url(/layout/images/index-img-1.jpg)")
+                .promo__content
+                    .promo__title Комфортабельные номера
+                    .promo__text Выберите номер на свой вкус и насладитесь великолепием морского воздуха 
+            a.promo(href="#")
+                .promo__image(style="background-image: url(/layout/images/index-img-1.jpg)")
+                .promo__content
+                    .promo__title Комфортабельные номера
+                    .promo__text Выберите номер на свой вкус и насладитесь великолепием морского воздуха 

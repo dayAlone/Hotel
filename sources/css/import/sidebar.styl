@@ -1,0 +1,208 @@
+.sidebar
+	position fixed
+	left 0
+	top 0
+	height 100%
+	width 270px
+	padding 0 23px
+	overflow auto
+	z-index 1000
+	-webkit-overflow-scrolling: touch;
+	transform translateX(-270px)
+	pointer-events none
+	t transform
+	background blue2
+	.open &
+		transform translateX(0)
+		pointer-events all
+	@media (min-width: scr_md)
+		background transparent
+		overflow hidden
+		backface-visibility: hidden
+		-moz-backface-visibility: hidden
+	@media (min-width: scr_md)
+		transform none
+		pointer-events all
+	&:after
+		position absolute
+		content ""
+		top 0
+		left 0
+		width 100%
+		z-index 20
+		height 100%
+		z-index 1
+		background blue2
+		opacity 1
+		@media (min-width: scr_md)
+			opacity 0.8
+		.mobile &
+			opacity 1
+	> *
+		position relative
+		z-index 3
+	&__content, &:after, &__bg
+		min-height 450px
+		@media (min-width: scr_md)
+			min-height 650px
+		@media (min-height: 750px) and (min-width: scr_md)
+			min-height 750px
+	&__bg
+		position fixed
+		top 0%
+		left 0%
+		width 270px
+		height 100%
+		overflow hidden
+		z-index 1
+		t opacity
+		display none
+		@media (min-width: scr_md)
+			display block
+		.mobile &
+			display none
+		&-image
+			top 50%
+			left 50%
+			overflow hidden
+			position absolute
+			width 100%
+			height 100%
+			opacity 0
+			transform translate3d(-50%, -50%, 0)
+			//t opacity, 2s
+		//clip: rect(0, 270px, auto, 0)
+	&__content
+		height 100%
+		padding 0px 0 25px
+		position relative
+	&__footer
+		position absolute
+		bottom 25px
+		left 0
+		z-index 30
+		width 100%
+		color alpha(white, .2)
+		font-size 11px
+		line-height 1.6
+		t color
+		display none
+		@media (min-width: scr_sm)
+			display inline-block
+		a
+			color alpha(white, .2)
+			&:not(.social):hover
+				color alpha(white, .8)
+				border-line alpha(@color, .9)
+		&:hover, &:hover a
+			color alpha(white, .8)
+	&__nav, &__weather
+		position absolute
+		left 0px
+		z-index 30
+		top 100px
+		@media (min-width: scr_sm)
+			transform translateY(-50%)
+			top 50%
+			margin-top -50px
+		@media (min-width: scr_md)
+			margin-top 0px
+		@media (min-width: scr_md) and (min-height: 750px)
+			margin-top -50px
+
+	&__weather
+		top auto
+		opacity 0
+		pointer-events none
+		bottom 20%
+		@media (min-width: scr_sm)
+			bottom 17.5%
+		@media (max-width: scr_xs) and (max-width: scr_md) and (min-height: 565px)
+			opacity 1
+			bottom 40px
+		@media (min-height: 750px)
+			opacity 1
+	.weather
+		color #b0ceff
+		font-size 12px
+		&__title
+			text-transform uppercase
+			font-weight bold
+			margin-bottom 10px
+		&__temperature
+			line-height 29px
+			margin-top 13px
+			color white
+			font-size 26px
+			svg
+				display inline-block
+				vertical-align middle
+				position relative
+				top -3px
+				size 29px
+				margin-right 10px
+	.logo
+		display none
+		@media (min-width: scr_sm)
+			display block
+		img, svg
+			max-width 100%
+	.nav
+		&__divider
+			margin 20px 0 20px
+			size 49px 3px
+			background blue3
+		&__item
+			color white
+			font-size 16px
+			line-height 1.6
+			&--active, &:hover
+				color blue3
+			&--big
+				font-size 20px
+				font-weight bold
+				line-height 1.7
+	&__social
+		width 100%
+		margin-right -8px
+		margin-left -8px
+		margin-bottom 25px
+		.social
+			margin 0 8px
+			display inline-block
+			opacity .5
+			&:hover
+				opacity 1
+			svg
+				vertical-align middle
+				display inline-block
+			w = 16px 9px 19px 13px 11px 25px
+			h = 19px 17px 15px 15px 18px 17px
+			social = lj fb tw vk ok yt
+			for name, key in social
+				&--{name}
+					svg
+						size: w[key] h[key]
+	&__languages
+		text-align center
+		margin-bottom 45px
+		height 50px
+		line-height 50px
+		background-color alpha(white, .2)
+		margin-right -23px
+		margin-left -23px
+		.lang
+			font-size 10px
+			text-transform uppercase
+			color white
+			font-weight bold
+			margin 0 17px
+			line-height 2
+			display inline-block
+			&:first-of-type
+				margin-left 0px
+			&:last-of-type
+				margin-right 0px
+			&--active, &:hover
+			    color white
+				border-line white, 17px

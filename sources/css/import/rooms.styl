@@ -1,0 +1,60 @@
+.rooms
+    full-width()
+    .room
+        min-height 200px
+
+        height calc(33.33333vh - 17px)
+        float left
+        background-size cover
+        background-position center center
+        position relative
+        width 100%
+        @media (min-width: scr_sm)
+            width 50%
+        @media (min-width: scr_md)
+            width 25%
+            height calc(50vh - 25px)
+        &:hover
+            .room__button, &:after
+                    opacity 1
+        &__name
+            position absolute
+            bottom 20px
+            left 20px
+            font-weight bold
+            color white
+            font-size 24px
+            line-height 1
+            z-index 3
+        &:after
+            position absolute
+            size 100%
+            top 0
+            left 0
+            content ""
+            z-index 2
+            background-color alpha(black, .75)
+            opacity 0
+            t all
+        &__button
+            @extend .slider__button
+            position absolute
+            top 50%
+            left 50%
+            transform translate3d(-50%, -50%, 0)
+            opacity 0
+            z-index 3
+            t all
+        &--height
+
+            float right
+            @media (min-width: scr_md)
+                height calc(100vh - 50px)
+                min-height 400px
+        &--width
+            &:last-of-type
+                width 100%
+                @media (min-width: scr_md)
+                    width 50%
+            @media (min-width: scr_md)
+                width 50%

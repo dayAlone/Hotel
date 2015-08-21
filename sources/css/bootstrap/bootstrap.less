@@ -1,0 +1,87 @@
+// Core variables and mixins
+
+@folder: '../../../bower_components/bootstrap/less/';
+
+@import "@{folder}variables.less";
+
+
+@screen-sm:                  760px;
+@screen-sm-min:              @screen-sm;
+@screen-tablet:              @screen-sm-min;
+/*
+
+// Medium screen / desktop
+//** Deprecated `@screen-md` as of v3.0.1
+@screen-md:                  1072px;
+@screen-md-min:              @screen-md;
+//** Deprecated `@screen-desktop` as of v3.0.1
+@screen-desktop:             @screen-md-min;
+
+// Large screen / wide desktop
+//** Deprecated `@screen-lg` as of v3.0.1
+@screen-lg:                  1420px;
+@screen-lg-min:              @screen-lg;
+//** Deprecated `@screen-lg-desktop` as of v3.0.1
+@screen-lg-desktop:          @screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);
+*/
+
+@grid-gutter-width         : 30px;
+@container-tablet          : (720px + @grid-gutter-width);
+@container-desktop         : (940px + @grid-gutter-width);
+@container-large-desktop   : (1140px + @grid-gutter-width);
+@navbar-padding-horizontal : floor((@grid-gutter-width / 2));
+
+@import "@{folder}mixins.less";
+
+// Reset and dependencies
+@import "@{folder}normalize.less";
+@import "@{folder}print.less";
+//@import "@{folder}glyphicons.less";
+
+// Core CSS
+@import "@{folder}scaffolding.less";
+@import "@{folder}type.less";
+@import "@{folder}code.less";
+@import "@{folder}grid.less";
+@import "@{folder}tables.less";
+@import "@{folder}forms.less";
+//@import "@{folder}buttons.less";
+
+// Components
+@import "@{folder}component-animations.less";
+@import "@{folder}responsive-embed.less";
+/*@import "@{folder}dropdowns.less";
+@import "@{folder}button-groups.less";
+@import "@{folder}input-groups.less";
+@import "@{folder}navs.less";
+@import "@{folder}navbar.less";
+@import "@{folder}breadcrumbs.less";
+@import "@{folder}pagination.less";
+@import "@{folder}pager.less";
+@import "@{folder}labels.less";
+@import "@{folder}badges.less";
+@import "@{folder}jumbotron.less";
+@import "@{folder}thumbnails.less";
+@import "@{folder}alerts.less";
+@import "@{folder}progress-bars.less";
+@import "@{folder}media.less";
+@import "@{folder}list-group.less";
+@import "@{folder}panels.less";
+
+@import "@{folder}wells.less";
+@import "@{folder}close.less";*/
+
+// Components w/ JavaScript
+@import "@{folder}modals.less";
+/*@import "@{folder}tooltip.less";
+@import "@{folder}popovers.less";
+@import "@{folder}carousel.less";
+*/
+// Utility classes
+@import "@{folder}utilities.less";
+@import "@{folder}responsive-utilities.less";

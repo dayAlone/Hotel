@@ -1,0 +1,64 @@
+include includes/header
+<body class="half" style="background-image: url(/layout/images/img-1.jpg)">
+- var activeItem = 4
+- var href = "/layout/images/img-1.jpg"
+include includes/toolbar
+include includes/sidebar
+header.header.visible-xs(style="background-image: url(#{href})")
+    .header__title Новости
+    a.header__button(href="/buy.html") Забронировать номер
+    
+.page.page--half
+    .page__content
+            
+        h1.page__title.hidden-xs Новости
+        .news-list
+            .news
+                a.news__image(href="#", style="background-image: url(/layout/images/news-1.jpg)")
+                .news__content
+                    .news__date 06.05.2015
+                    a.news__title(href="#") Добавили пакет документов для юридических лиц
+            .news
+                a.news__image(href="#", style="background-image: url(/layout/images/news-2.jpg)")
+                .news__content
+                    .news__date 12.04.2015
+                    a.news__title(href="#") Изменилося способ оплаты корпаративных путевок
+            .news
+                a.news__image(href="#", style="background-image: url(/layout/images/news-3.jpg)")
+                .news__content
+                    .news__date 08.04.2015
+                    a.news__title(href="#") Обновились спецпредложения на летний сезон, групповое бронирование, семейный отдых и многое другое
+            .news
+                a.news__image(href="#", style="background-image: url(/layout/images/news-4.jpg)")
+                .news__content
+                    .news__date 26.03.2015
+                    a.news__title(href="#") Мы добавили новый способ оплаты с помощью PayPal
+        .pages.center
+            a.pages__item.pages__item--active(href="#") 1
+            a.pages__item(href="#") 2
+            a.pages__item(href="#") 3
+            a.pages__item(href="#") 4
+            a.pages__item(href="#") 5
+
+
+.side-modal
+    .side-modal__content
+        .right.m-margin-bottom
+            a.side-modal__close(href="#")
+                include ../../public_html/layout/images/svg/close.svg
+        .text
+            .news__date 26.03.2015
+            h2 Мы добавили новый способ оплаты с помощью PayPal
+            img.right(src="/layout/images/img-1.jpg", width="300")
+            p Предоставление владельцам счетов PayPal возможности без труда осуществлять платежи посредством интеграции на основе API. Клиенты выбирают способ оплаты и адрес доставки в системе PayPal, затем возвращаются на ваш веб-сайт для окончательного оформления покупки.
+
+            p Передача покупок из корзины в PayPal, где клиенты их оплатят. PayPal авторизует платежи и возвращает клиентов на ваш веб-сайт.
+
+            p Прием платежей в следующих валютах: Доллары США, канадские доллары, австралийские доллары, евро, английские фунты стерлингов, японские йены, новозеландские доллары, швейцарские франки, гонконгские доллары, сингапурские доллары, шведские кроны, датские кроны, польские злотые, норвежские кроны, венгерские форинты, чешские кроны, израильские новые шекели, бразильские реалы (только для пользователей в Бразилии), малайзийские ринггиты (только для пользователей в Малайзии), филиппинские песо, новые тайваньские доллары, тайские баты, турецкие лиры (только для пользователей в Турции), Российский рубль, и мексиканские песо.
+
+        .fotorama(data-width="100%", data-loop="true")
+            img(src="/layout/images/img-1.jpg")
+            img(src="/layout/images/img-2.jpg")
+            img(src="/layout/images/img-3.jpg")
+
+include includes/footer

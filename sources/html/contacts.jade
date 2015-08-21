@@ -1,0 +1,46 @@
+include includes/header
+<body>
+- var activeItem = 8
+- var href = "/layout/images/bg-test.jpg"
+include includes/toolbar
+include includes/sidebar
+header.header.visible-xs(style="background-image: url(/layout/images/img-2.jpg)")
+    .header__title 
+        span Контакты
+    a.header__button(href="/buy.html") Забронировать номер
+    
+.page
+    #map(data-coords="39.00000,35.00000", data-zoom="5")
+    .container-fluid
+        .row.no-gutter
+            .col-lg-7
+                .page__content
+                    h1.page__title.hidden-xs Контакты
+                    .text
+                        p 119048, г. Москва, ул. Воронцовская, д.20
+                        p Тел.: +7 (495) 651-09-39
+                        p Факс: +7 (495) 651-91-39
+                        p 
+                            a(href="mailto:info@spektr-hotel.ru") info@spektr-hotel.ru
+            .col-lg-5
+                .feedback.center
+                    .feedback__form
+                        h3.feedback__title.center Задайте нам вопрос
+                        .row
+                            .col-md-4
+                                label.feedback__label имя
+                            .col-md-8
+                                input(type="text").feedback__input
+                        .row
+                            .col-md-4
+                                label.feedback__label эл. почта
+                            .col-md-8
+                                input(type="text").feedback__input
+                        .row
+                            .col-md-4
+                                label.feedback__label сообщение
+                            .col-md-8
+                                textarea.feedback__textarea
+                        .center
+                            button.feedback__button(type="submit") Отправить
+include includes/footer

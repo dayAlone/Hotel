@@ -1,0 +1,140 @@
+{
+   "bem":{
+      "js":"/jquery.bem/jquery.bem.js"
+   },
+   "bgcheck":{
+      "js":"/bgcheck/background-check.js"
+   },
+   "blurjs":{
+      "js":"/blurjs/blur.js"
+   },
+   "iCheck":{
+      "js":"/iCheck/icheck.js"
+   },
+   "datepicker":{
+      "js":["/bootstrap-datepicker/js/bootstrap-datepicker.js", "/bootstrap-datepicker/js/locales/bootstrap-datepicker.ru.js"],
+      "css": "/bootstrap-datepicker/dist/css/bootstrap-datepicker.css"
+   },
+   "bootstrap":{
+      "js":[
+         "/bootstrap/js/transition.js",
+         "/bootstrap/js/modal.js"
+      ],
+      "css":"/../sources/css/bootstrap.css"
+   },
+   "modernizr": {
+       "js":"/../sources/js/modernizr.js"
+   },
+   "browser":{
+      "js":"/jquery.browser/dist/jquery.browser.js"
+   },
+   "chosen":{
+      "js":"/chosen/chosen.jquery.js"
+   },
+   "cluster":{
+      "js":"/js-marker-clusterer/src/markerclusterer.js"
+   },
+   "cookie":{
+      "js":"/jquery.cookie/jquery.cookie.js"
+   },
+   "easyzoom":{
+      "js":"/easyzoom/dist/easyzoom.js"
+   },
+   "fotorama":{
+      "js":"/fotorama/fotorama.js",
+      "css":"/fotorama/fotorama.css",
+      "files": "/fotorama/*.png"
+   },
+   "history":{
+      "js":"/history.js/scripts/bundled-uncompressed/html5/jquery.history.js"
+   },
+   "hoverIntent":{
+      "js":"/hoverIntent/jquery.hoverIntent.js"
+   },
+   "html2canvas":{
+      "js":"/html2canvas/build/html2canvas.js"
+   },
+   "hypher":{
+      "js":[
+         "/hypher/dist/jquery.hypher.js",
+         "/hypher_lib/dist/browser/ru.js"
+      ]
+   },
+   "imagesLoaded":{
+      "js":"/imagesloaded/imagesloaded.pkgd.js"
+   },
+   "isotope":{
+      "js":"/isotope/dist/isotope.pkgd.js"
+   },
+   "lazyload":{
+      "js":[ "/lazyloadxt/dist/jquery.lazyloadxt.js", "/lazyloadxt/dist/jquery.lazyloadxt.bg.js" ]
+   },
+   "lodash":{
+       "js" : "/lodash/lodash.js"
+   },
+   "likes":{
+      "js" : "/social-likes/src/social-likes.js",
+      "css" : "/social-likes/social-likes_flat.css"
+   },
+   "jquery":{
+      "js":"/jquery/dist/jquery.js"
+   },
+   "jetslider":{
+      "js":"/jetSlider/jquery.jetslider.js"
+   },
+   "pace":{
+      "js":"/pace/pace.js",
+      "css":"/pace/themes/white/pace-theme-center-radar.css"
+   },
+   "mask":{
+      "js":"/jQuery-Mask-Plugin/jquery.mask.js"
+   },
+   "parsley":{
+      "js":"/parsleyjs/dist/parsley.js"
+   },
+   "photoswipe":{
+      "js": ["/photoswipe/dist/photoswipe.js", "/photoswipe/dist/photoswipe-ui-default.js"],
+      "css": [ "/photoswipe/dist/photoswipe.css", "/photoswipe/dist/default-skin/default-skin.css" ],
+      "files": ["/photoswipe/dist/default-skin/default-skin.svg", "/photoswipe/dist/default-skin/default-skin.png", "/photoswipe/dist/default-skin/preloader.gif"]
+   },
+   "prettyPhoto":{
+      "js":"/prettyPhoto/js/jquery.prettyPhoto.js",
+      "css":"/prettyPhoto/css/prettyPhoto.css",
+      "files": "/prettyPhoto/images/prettyPhoto/default/*.png"
+   },
+   "rangeSlider":{
+      "js":"/ion.rangeSlider/js/ion.rangeSlider.js"
+   },
+   "slick":{
+      "js":"/slick/slick/slick.js",
+      "css":"/slick/slick/slick.css"
+   },
+   "slimmenu":{
+      "js":"/slimmenu/jquery.slimmenu.js"
+   },
+   "spin":{
+      "js":[
+         "/spin.js/spin.js",
+         "/spin.js/jquery.spin.js"
+      ]
+   },
+   "scrollbar":{
+      "js":"/perfect-scrollbar/src/perfect-scrollbar.js",
+      "css":"/perfect-scrollbar/src/perfect-scrollbar.css"
+   },
+   "transit":{
+       "js":"/jquery.transit//jquery.transit.js"
+   },
+   "tooltip":{
+      "js":"/tooltip/js/tooltip.js"
+   },
+   "vide":{
+      "js":"/vide/dist/jquery.vide.js"
+   },
+   "velocity":{
+      "js":[
+         "/velocity/velocity.js",
+         "/velocity/velocity.ui.js"
+      ]
+   }
+}

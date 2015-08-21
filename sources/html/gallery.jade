@@ -1,0 +1,32 @@
+include includes/header
+<body class="">
+- var activeItem = 6
+include includes/toolbar
+include includes/sidebar
+
+header.header.visible-xs(style="background-image: url(/layout/images/img-2.jpg)")
+    .header__title 
+        span Фотогалерея
+    a.header__button(href="/buy.html") Забронировать номер
+
+.page.page--line
+    nav.page__nav.center.nav
+        a.nav__item(href="#") Отель
+        a.nav__item.nav__item--active(href="#") Ресторан
+        a.nav__item(href="#") Номера
+        a.nav__item(href="#") Бассейн
+        
+.slider.slider--full(data-width="100%", data-height="100%", data-min-height="700", data-nav="false", data-arrows="false" data-click="false", data-loop="true", data-transition="dissolve", data-transitionduration="1000")
+    - var i = 5
+    while i > 0
+        .slider__item(style="background-image: url(/layout/images/img-#{i}.jpg)") &nbsp;
+        - i--
+
+.previews
+    - var i = 5
+    while i > 0
+        .preview
+            .preview__image(style="background-image: url(/layout/images/img-#{i}.jpg)") &nbsp;
+        - i--
+
+include includes/footer

@@ -1,0 +1,28 @@
+include includes/header
+<body>
+- var activeItem = 0
+- var href = "/layout/images/bg-test.jpg"
+include includes/toolbar
+include includes/sidebar
+header.header.visible-xs(style="background-image: url(#{href})")
+    .header__title Комнаты
+    a.header__button(href="/buy.html") Забронировать номер
+.page
+    .rooms
+        a.room.room--width(href="/room.html", style="background-image: url(/layout/images/img-1.jpg)")
+            .room__name Standart Room
+            .room__button(href="/room.html") ПОДРОБНЕЕ
+        a.room(href="/room.html", style="background-image: url(/layout/images/img-2.jpg)")
+            .room__name Standart Suite Room
+            .room__button(href="/room.html") ПОДРОБНЕЕ
+        a.room.room--height(href="/room.html", style="background-image: url(/layout/images/img-3.jpg)")
+            .room__name Superior Room
+            .room__button(href="/room.html") ПОДРОБНЕЕ
+        a.room(href="/room.html", style="background-image: url(/layout/images/img-4.jpg)")
+            .room__name Superior Deluxe Room
+            .room__button(href="/room.html") ПОДРОБНЕЕ
+        a.room.room--width(href="/room.html", style="background-image: url(/layout/images/img-5.jpg)")
+            .room__name Superior Royal Room
+            .room__button(href="/room.html") ПОДРОБНЕЕ
+
+include includes/footer

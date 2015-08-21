@@ -1,0 +1,43 @@
+include includes/header
+<body>
+- var activeItem = 5
+- var href = "/layout/images/bg-test.jpg"
+include includes/toolbar
+include includes/sidebar
+header.header.visible-xs(style="background-image: url(#{href})")
+    .header__title Цены
+    a.header__button(href="/buy.html") Забронировать номер
+.page
+    .prices
+        .price
+            a.price__image(href="/room.html", style="background-image: url(/layout/images/room-1.jpg)")
+            .price__description
+                .price__name Standart price
+                .price__price от 4 500 руб.
+                a.price__button(href="#") ПОДРОБНЕЕ
+        .price
+            a.price__image(href="/room.html", style="background-image: url(/layout/images/room-2.jpg)")
+            .price__description
+                .price__name Standart Suite price
+                .price__price от 6 500 руб.
+                a.price__button(href="#") ПОДРОБНЕЕ
+        .price
+            a.price__image(href="/room.html", style="background-image: url(/layout/images/room-3.jpg)")
+            .price__description
+                .price__name Superior price
+                .price__price от 8 500 руб.
+                a.price__button(href="#") ПОДРОБНЕЕ
+        .price
+            a.price__image(href="/room.html", style="background-image: url(/layout/images/room-4.jpg)")
+            .price__description
+                .price__name Superior Deluxe price
+                .price__price от 9 000 руб.
+                a.price__button(href="#") ПОДРОБНЕЕ
+        .price
+            a.price__image(href="/room.html", style="background-image: url(/layout/images/room-5.jpg)")
+            .price__description
+                .price__name Superior Royal price
+                .price__price от 15 000 руб.
+                a.price__button(href="#") ПОДРОБНЕЕ
+
+include includes/footer
