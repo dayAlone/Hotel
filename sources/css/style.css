@@ -1029,6 +1029,7 @@ svg g {
 @media (max-width: 992px) {
   .wrap {
     max-height: 100%;
+    min-height: calc(100vh - 70px);
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -1526,7 +1527,7 @@ svg g {
   margin-bottom: 40px;
 }
 .page__content,
-.side-modal .side-modal__content {
+.side-modal__content {
   float: left;
   width: 100%;
   min-width: 220px;
@@ -1534,7 +1535,7 @@ svg g {
 }
 @media (min-width: 760px) {
   .page__content,
-  .side-modal .side-modal__content {
+  .side-modal__content {
     padding: 40px 55px;
   }
 }
@@ -1699,7 +1700,8 @@ svg g {
   filter: none;
   pointer-events: all;
 }
-.side-modal .side-modal__content {
+.side-modal__content {
+  padding-top: 60px;
   padding-bottom: 40px;
 }
 .side-modal .fotorama {
@@ -1883,6 +1885,13 @@ svg g {
   height: 100%;
   min-height: 100%;
   position: relative;
+}
+.open .index .slider {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -o-transform: none;
+  -ms-transform: none;
+  transform: none;
 }
 .index__footer {
   z-index: 300;
