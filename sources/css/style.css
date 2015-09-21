@@ -3413,13 +3413,11 @@ svg g {
     padding-left: 15px;
   }
 }
-.offers {
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-}
 @media (min-width: 760px) {
   .offers {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
     position: absolute;
     top: 50px;
     min-height: calc(100% - 50px);
